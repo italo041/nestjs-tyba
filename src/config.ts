@@ -10,5 +10,6 @@ export default registerAs('config', () => {
       password: process.env.DATABASE_PASSWORD,
     },
     jwtSecret: process.env.JWT_SECRET,
+    travelAdvisorKey: process.env.TRAVEL_ADVISOR_KEY,
   };
 });

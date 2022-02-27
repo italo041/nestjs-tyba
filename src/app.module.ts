@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import * as Joi from 'joi';
 import { ConfigModule } from '@nestjs/config';
+import { AuthModule } from './auth/auth.module';
 
 import config from './config';
 
@@ -18,6 +19,7 @@ import config from './config';
         DATABASE_PASSWORD: Joi.string().required(),
       }),
     }),
+    AuthModule,
   ],
   controllers: [],
   providers: [],

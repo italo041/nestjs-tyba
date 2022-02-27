@@ -3,6 +3,7 @@ import * as Joi from 'joi';
 import { ConfigModule } from '@nestjs/config';
 
 import config from './config';
+
 @Module({
   imports: [
     ConfigModule.forRoot({

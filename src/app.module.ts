@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { AuthModule } from './auth/auth.module';
 import { DatabaseModule } from './database/database.module';
+import { RestaurantsModule } from './restaurants/restaurants.module';
 import config from './config';
 
 @Module({
@@ -19,10 +20,12 @@ import config from './config';
         DATABASE_USERNAME: Joi.string().required(),
         DATABASE_PASSWORD: Joi.string().required(),
         JWT_SECRET: Joi.string().required(),
+        TRAVEL_ADVISOR_KEY: Joi.string().required(),
       }),
     }),
     AuthModule,
     DatabaseModule,
+    RestaurantsModule,
   ],
   controllers: [],
   providers: [],
